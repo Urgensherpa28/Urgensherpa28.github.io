@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sssnake</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="welcome">
+      <h1>Welcome to Sssnake</h1>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="timeContainer">
+      <h2>Time:</h2>
+      <div class="time">0</div>
+    </div>
+
+    <div class="scoreContainer">
+      <h2>Score:</h2>
+      <div class="scoreBoard">0</div>
+    </div>
+
+    <div class="highScoreContainer">
+      <h2>Highscore:</h2>
+      <div class="highScore">0</div>
+    </div>
+
+    <div class="mobileControl">
+      <div class="btn">
+        <button class="up" onmousedown="up()">⬆️</button>
+        <div>
+          <button class="left" onmousedown="left()">⬅️</button>
+          <button class="right" onmousedown="right()">➡️</button>
+        </div>
+        <button class="down" onmousedown="down()">⬇️</button>
+      </div>
+    </div>
+
+    <script src="snake.js"></script>
+    <script src="food.js"></script>
+    <script src="draw.js"></script>
+  </body>
+</html>
