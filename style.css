@@ -34,12 +34,25 @@ h2 {
 /* GAME BOARD END */
 
 /* TIME */
-.timeContainer {
+
+.stats {
+  justify-content: space-evenly;
+}
+
+.timeScore {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  /* margin-left: 10%;
+  margin-top: 1%; */
+  /* justify-content: space-evenly; */
+}
+/* .timeContainer {
   display: inline-block;
   position: absolute;
   margin-left: 10%;
   margin-top: 1%;
-}
+} */
 
 .time {
   border: solid 2px #eddea4;
@@ -50,7 +63,7 @@ h2 {
   display: inline-block;
   padding: 0.5vw;
   font-size: 4em;
-  width: 10vw;
+  width: 4rem;
 }
 /* TIME END */
 
@@ -71,7 +84,8 @@ h2 {
   display: inline-block;
   padding: 0.5vw;
   font-size: 4em;
-  width: 10vw;
+  /* width: 10vw; */
+  width: 4rem;
 }
 /* SCORE END */
 
@@ -92,12 +106,12 @@ h2 {
   display: inline-block;
   padding: 0.5vw;
   font-size: 4em;
-  width: 10vw;
+  /* width: 10vw; */
+  width: 4rem;
 }
 /* HIGH SCORE END*/
 
 /*ONSCREEN CONTROLS*/
-
 .btn {
   justify-content: space-between;
 }
@@ -108,48 +122,272 @@ h2 {
   margin-left: 10%;
   margin-top: 32%;
   padding: 10px;
-  background-color: rgba(245, 245, 245, 0.329);
+  /* background-color: rgba(245, 245, 245, 0.329); */
   border-radius: 10%;
 }
 
 .up {
-  border: solid 2px #eddea4;
   border-top: 0;
   border-radius: 10px;
-  color: #575a4b;
-  background-color: #fff8f0;
   display: inline-block;
   font-size: 1em;
   width: 5vw;
 }
 .down {
-  border: solid 2px #eddea4;
   border-top: 0;
   border-radius: 10px;
-  color: #575a4b;
-  background-color: #fff8f0;
   display: inline-block;
   font-size: 1em;
   width: 5vw;
 }
 .left {
-  border: solid 2px #eddea4;
   border-top: 0;
   border-radius: 10px;
-  color: #575a4b;
-  background-color: #fff8f0;
   display: inline-block;
   font-size: 1em;
   width: 5vw;
 }
 .right {
-  border: solid 2px #eddea4;
   border-top: 0;
   border-radius: 10px;
-  color: #575a4b;
-  background-color: #fff8f0;
   display: inline-block;
   font-size: 1em;
   width: 5vw;
 }
 /*ONSCREEN CONTROLS END*/
+
+/*MEDIA QUERIES*/
+
+/********** MEDIUM DEVICES **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .welcome h1 {
+    font-size: 1.7rem;
+    display: inline-block;
+    width: auto;
+  }
+
+  #canvas {
+    height: 35em;
+    width: 35em;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .timeContainer {
+    font-size: 0.8rem;
+  }
+  .scoreContainer {
+    font-size: 0.8rem;
+  }
+  .highScoreContainer {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+  }
+}
+/********** MEDIUM DEVICES END **********/
+
+/********** SMALL DEVICES **********/
+
+@media (min-width: 768px) {
+  .welcome h1 {
+    font-size: 1.2rem;
+    display: inline-block;
+    width: auto;
+  }
+
+  #canvas {
+    height: 30em;
+    width: 30em;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .timeContainer {
+    font-size: 0.5rem;
+    margin-left: 2.5rem;
+    margin-top: auto;
+  }
+
+  .scoreContainer {
+    font-size: 0.5rem;
+    margin-left: 2.5rem;
+    margin-top: 6rem;
+  }
+
+  .highScoreContainer {
+    font-size: 0.5rem;
+    margin-left: 2.5rem;
+    margin-top: 12rem;
+  }
+
+  .mobileControl {
+    margin-left: 2.5rem;
+    margin-top: 18rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+  }
+}
+/********** SMALL DEVICES END **********/
+
+/********** EXTRA SMALL DEVICES **********/
+@media (max-width: 767px) {
+  .welcome h1 {
+    font-size: 1rem;
+    display: inline-block;
+    width: auto;
+  }
+
+  #canvas {
+    height: 25em;
+    width: 25rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .timeContainer {
+    font-size: 0.5rem;
+    margin-left: 2.5rem;
+    margin-top: auto;
+  }
+
+  .time {
+    padding-bottom: 0.5px;
+  }
+
+  .scoreContainer {
+    font-size: 0.5rem;
+    margin-left: 2.5rem;
+    margin-top: 6rem;
+  }
+
+  .scoreBoard {
+    padding-bottom: 0.5px;
+  }
+
+  .highScoreContainer {
+    font-size: 0.5rem;
+    margin-left: 2.5rem;
+    margin-top: 12rem;
+  }
+  .highScore {
+    padding-bottom: 0.5px;
+  }
+
+  .mobileControl {
+    margin-left: 2.5rem;
+    margin-top: 18rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+  }
+}
+/********** EXTRA SMALL DEVICES END **********/
+
+@media (min-width: 375px) and (max-width: 680px) {
+  .welcome h1 {
+    font-size: 1rem;
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  #canvas {
+    height: 20em;
+    width: 20rem;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+  }
+
+  .mobileControl {
+    position: relative;
+    margin-left: 0em;
+    margin-top: auto;
+    justify-content: space-around;
+  }
+
+  .btn {
+    font-size: 2rem;
+    position: relative;
+  }
+
+  .up {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .down {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+  .left {
+    background-color: transparent;
+    border: transparent;
+    margin-right: 25px;
+    cursor: pointer;
+  }
+  .right {
+    background-color: transparent;
+    border: transparent;
+    margin-left: 25px;
+    cursor: pointer;
+  }
+
+  /* .stats {
+    justify-content: space-evenly;
+    float: left;
+    margin-top: 21rem;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+  } */
+
+  /* .timeScore {
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    font-size: 0.5rem;
+    margin-left: 1.5rem;
+    margin-top: auto;
+  } */
+  /* 
+  .scoreContainer {
+    border: 1px solid black;
+    width: 5rem;
+    display: inline-block;
+
+    position: relative;
+    display: flex;
+    font-size: 0.5rem;
+    margin-left: 1.5rem;
+    margin-top: auto;
+  } */
+
+  /* .highScoreContainer {
+    border: 1px solid black;
+    width: 5rem;
+    display: inline-block;
+    display: flex;
+    font-size: 0.5rem;
+    margin-left: 2.5rem;
+    margin-top: 12rem;
+  } */
+}
+
+/*MEDIA QUERIES END*/
